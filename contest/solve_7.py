@@ -26,20 +26,23 @@ import math
 import random
 
 class Solution:
-	def solve(self,a,b):
-		count = 100000
-		incount = 0
-		maxY = self.f(b)
+	def solve(self, a, b):
+		if ((a == None) or (b == None) or (a >= b)):
+			return 0
+		count = 880000
+		incount = 0.0
+		maxY = self.f(a)
+		area = (b - a) * maxY 
 		for i in range(count):
 			x = random.uniform(a, b)
 			y = random.uniform(0, maxY)
-			if y <= self.f(x):
-				incount += 1.0
-		return incount / count
+			if y < self.f(x):
+				incount += 1
+		return float(incount) / count * area
 
 	def f(self, x):
-		return (math.e ** (-x ** 2 / 2)) / ((2 ** 0.5) * ( math.pi** 0.5))
+		return (math.exp(-x ** 2 / 2.0)) / math.sqrt(2 * math.pi)
 
 s = Solution()
-print s.solve(2, 5)
+print s.solve(1, 5)
 			
