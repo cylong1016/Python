@@ -1,4 +1,6 @@
 #-*- coding:utf-8 -*-
+# 2015-06-20
+# author cylong
 
 """
 描述：
@@ -21,7 +23,6 @@ m: 定积分值
 （2）不能使用scipy.integrate库
 """
 
-# from math import e
 import math
 import random
 

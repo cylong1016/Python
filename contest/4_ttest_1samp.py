@@ -1,4 +1,6 @@
 #-*- coding:utf-8 -*-
+# 2015-06-21
+# author cylong
 
 """
 ร่ส๖ฃบ
