@@ -3,22 +3,22 @@
 # author cylong
 
 """
-ÃèÊö£º
+æè¿°ï¼š
 
-ÀûÓÃpythonÊµÏÖ¼ò»¯°æµ¥×ÜÌåT¼ìÑéº¯Êý
-ÊäÈë£º
+åˆ©ç”¨pythonå®žçŽ°ç®€åŒ–ç‰ˆå•æ€»ä½“Tæ£€éªŒå‡½æ•°
+è¾“å…¥ï¼š
 
-a : ·Ç¿ÕÒ»Î¬Êý×é£»popmean£º¼ÙÉè×ÜÌåÆÚÍûÖµ£»Ê¾ÀýÊäÈë : [1.0,2.0,3.0],2.0
+a : éžç©ºä¸€ç»´æ•°ç»„ï¼›popmeanï¼šå‡è®¾æ€»ä½“æœŸæœ›å€¼ï¼›ç¤ºä¾‹è¾“å…¥ : [1.0,2.0,3.0],2.0
 
-Êä³ö£º
+è¾“å‡ºï¼š
 
-[t-val,p-value]·Ö±ð´ú±í¼ìÑé½á¹ûTÖµÓëÆä¶ÔÓ¦µÄPÖµ£»Ê¾ÀýÊä³ö : [0.000000,1.000000]
+[t-val,p-value]åˆ†åˆ«ä»£è¡¨æ£€éªŒç»“æžœTå€¼ä¸Žå…¶å¯¹åº”çš„På€¼ï¼›ç¤ºä¾‹è¾“å‡º : [0.000000,1.000000]
 
-×¢Òâ£º
+æ³¨æ„ï¼š
 
-£¨1£©scipy°üÖ»ÄÜÊ¹ÓÃscipy.x.ppf»òscipy.x.sfº¯Êý
+ï¼ˆ1ï¼‰scipyåŒ…åªèƒ½ä½¿ç”¨scipy.x.ppfæˆ–scipy.x.sfå‡½æ•°
 
-£¨2£©½á¹û±£Áô6Î»Ð¡Êýµã
+ï¼ˆ2ï¼‰ç»“æžœä¿ç•™6ä½å°æ•°ç‚¹
 """
 import math
 import numpy
