@@ -3,20 +3,20 @@
 # author cylong
 
 """
-������
+描述：
 
-����pythonʵ�ּ򻯰�˫����K-S���麯��
-���룺
+利用python实现简化版双样本K-S检验函数
+输入：
 
-a,b�ֱ�Ϊ�ǿ�һά���飻ʾ������ : [1.0,2.0,3.0],[1.0,2.0,3.0]
+a,b分别为非空一维数组；示例输入 : [1.0,2.0,3.0],[1.0,2.0,3.0]
 
-�����
+输出：
 
-ks-valueΪ������KSֵ��ʾ����� : 0.0
+ks-value为检验结果KS值；示例输出 : 0.0
 
-ע�⣺
+注意：
 
-��1�����ܵ���math��scipy��numpy��
+（1）不能调用math、scipy、numpy包
 """
 
 class Solution():

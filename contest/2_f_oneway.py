@@ -3,24 +3,24 @@
 # author cylong
 
 """
-ÃèÊö£º
+æè¿°ï¼š
 
-ÀûÓÃpythonÊµÏÖ¼ò»¯°æµ¥ÒòËØ·½²î¼ìÑéº¯Êý
-ÊäÈë£º
+åˆ©ç”¨pythonå®žçŽ°ç®€åŒ–ç‰ˆå•å› ç´ æ–¹å·®æ£€éªŒå‡½æ•°
+è¾“å…¥ï¼š
 
-sample1,sample2,... : ²»¶¨ÊýÁ¿£¨ÖÁÉÙÒ»¸ö£©µÄÒ»Î¬Êý×é£»Ê¾ÀýÊäÈë : [1.0,2.0,3.0],[2.0,2.0,3.0]
+sample1,sample2,... : ä¸å®šæ•°é‡ï¼ˆè‡³å°‘ä¸€ä¸ªï¼‰çš„ä¸€ç»´æ•°ç»„ï¼›ç¤ºä¾‹è¾“å…¥ : [1.0,2.0,3.0],[2.0,2.0,3.0]
 
-Êä³ö£º
+è¾“å‡ºï¼š
 
-[F-value, p-value]·Ö±ð´ú±í¼ìÑé½á¹ûFÖµÓëÆä¶ÔÓ¦µÄPÖµ£»Ê¾ÀýÊä³ö£º[0.250000£¬0.643330]
+[F-value, p-value]åˆ†åˆ«ä»£è¡¨æ£€éªŒç»“æžœFå€¼ä¸Žå…¶å¯¹åº”çš„På€¼ï¼›ç¤ºä¾‹è¾“å‡ºï¼š[0.250000ï¼Œ0.643330]
 
-×¢Òâ£º
+æ³¨æ„ï¼š
 
-£¨1£©scipy°üÖ»ÄÜÊ¹ÓÃscipy.x.ppf»òscipy.x.sfº¯Êý
+ï¼ˆ1ï¼‰scipyåŒ…åªèƒ½ä½¿ç”¨scipy.x.ppfæˆ–scipy.x.sfå‡½æ•°
 
-£¨2£©sample_iÎª¿ÕÊ±£¬·µ»ØÖµÎª[None,None]
+ï¼ˆ2ï¼‰sample_iä¸ºç©ºæ—¶ï¼Œè¿”å›žå€¼ä¸º[None,None]
 
-£¨3£©½á¹û±£Áô6Î»Ð¡Êýµã
+ï¼ˆ3ï¼‰ç»“æžœä¿ç•™6ä½å°æ•°ç‚¹
 """
 from scipy import stats
 
