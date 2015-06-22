@@ -24,6 +24,35 @@
  10<prglength<=25, prglength>=49），对于错填月份的情况，将月份*4.33作为其周数，对于其他错填情况则舍弃此条数据
 """
 
+import urllib
+from scipy import stats
+import json
+
 class Solution:
-    def solve(self):
-        pass
+	def solve(self):
+		url = "http://112.124.1.3:8060/getData/101.json"
+		page = urllib.urlopen(url)
+		html = page.read()
+		
+		data = json.loads(html)['data']
+		total_prg_len = 0.0
+		n = 0
+		for r in data:
+			prglength = r[2]
+			if prglength <= 5 or 10 < prglength <= 25 or prglength >= 49:
+				continue;
+			n += 1
+			if 5 < prglength <= 10:
+				prglength *= 4.33
+			total_prg_len += prglength
+			
+		mean_pre = total_prg_len / n
+		sigma = 4.0
+		za = stats.norm.isf(0.05 / 2)
+		tmp = sigma * za / (n ** 0.5)
+		lower = mean_pre - tmp
+		upper = mean_pre + tmp
+		return [round(lower, 6), round(upper, 6)]
+		
+s = Solution()
+print s.solve()
