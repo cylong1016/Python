@@ -16,11 +16,35 @@ AÎª¶şÎ¬Êı×é£¬Ã¿ĞĞ´ú±í×ÜÌåXµÄÒ»¸öË®Æ½ÉÏµÄÈ¡Öµ£¬Ã¿ÁĞ´ú±í×ÜÌåYµÄÒ»¸öË®Æ½ÉÏµÄÈ¡Öµ£»Ê
 
 ×¢Òâ£º
 
-£¨1£©AÖĞÖ»ÓĞÒ»ĞĞÊ±£¬·µ»Ø½á¹ûÎª[0.0,None]
+£¨1£©AÖĞÖ»ÓĞÒ»ĞĞÊ±£¬·µ»Ø½á¹ûÎª[0.0, None]
 
 £¨2£©½á¹û±£Áô6Î»Ğ¡Êıµã
+
 """
+
+from scipy import stats
+import numpy
 
 class Solution():
 	def independence_test(self, A):
-		pass
+		if len(A) <= 1 or A == None:
+			return [0.0, None]
+		r = len(A)
+		c = len(A[0])
+		
+		row = numpy.sum(A, 1)
+		column = numpy.sum(A, 0)
+		total = float(numpy.sum(A))
+		
+		x2 = 0.0
+		for i in range(r):
+			for j in range(c):
+				Tij = column[j] * row[i] / total
+				x2 += (A[i][j] - Tij) ** 2 / Tij
+		
+		p = stats.chi2.sf(abs(x2), (r - 1) * (c - 1))
+		return [round(x2, 6), round(p, 6)]
+		
+s = Solution()
+A = [[1.0, 2.0, 3.0], [2.0, 2.0, 3.0]]
+print s.independence_test(A)
