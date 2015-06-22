@@ -3,27 +3,71 @@
 # author cylong
 
 """
-ÃèÊö£º
+æè¿°ï¼š
 
-ÈÔÈ»ÀûÓÃNSFGÊý¾Ý£¨urlÎªhttp://112.124.1.3:8060/getData/101.json£©£¬
-µ«Õâ´ÎÎÒÃÇÏëÑéÖ¤µÚÒ»Ì¥Ó¤¶ùÊÇ·ñ¸üÇãÏòÓÚ¸üÔç»ò¸üÍí³öÉú¶ø½ÏÉÙ×¼Ê±³öÉúµÄ¼ÙÉè£¬Òò´ËÐèÒªÀûÓÃ¿¨·½¼ìÑé¼ÆËã³öÆä¿¨·½Öµchisq¼°ÍÆ·­¼ÙÉèµÄpÖµ¡£
-ÊÔÐ´º¯Êýsolve¼ÆËã¿¨·½Öµchisq¼°pÖµ
-ÊäÈë£º
+ä»ç„¶åˆ©ç”¨NSFGæ•°æ®ï¼ˆurlä¸ºhttp://112.124.1.3:8060/getData/101.jsonï¼‰ï¼Œ
+ä½†è¿™æ¬¡æˆ‘ä»¬æƒ³éªŒè¯ç¬¬ä¸€èƒŽå©´å„¿æ˜¯å¦æ›´å€¾å‘äºŽæ›´æ—©æˆ–æ›´æ™šå‡ºç”Ÿè€Œè¾ƒå°‘å‡†æ—¶å‡ºç”Ÿçš„å‡è®¾ï¼Œå› æ­¤éœ€è¦åˆ©ç”¨å¡æ–¹æ£€éªŒè®¡ç®—å‡ºå…¶å¡æ–¹å€¼chisqåŠæŽ¨ç¿»å‡è®¾çš„på€¼ã€‚
+è¯•å†™å‡½æ•°solveè®¡ç®—å¡æ–¹å€¼chisqåŠpå€¼
+è¾“å…¥ï¼š
 
-µ÷²éÑù±¾Êý¾Ý£¬¸ñÊ½Îª{"data":[[1, 1, 39, 1, 141, 1, 33.16, 6448.271111704751], [1, 2, 39, 1, 126, 2, 39.25, 6448.271111704751], ...]}
+è°ƒæŸ¥æ ·æœ¬æ•°æ®ï¼Œæ ¼å¼ä¸º{"data":[[1, 1, 39, 1, 141, 1, 33.16, 6448.271111704751], [1, 2, 39, 1, 126, 2, 39.25, 6448.271111704751], ...]}
 
-Êä³ö£º
+è¾“å‡ºï¼š
 
 [chisq,p]
 
-×¢Òâ£º
+æ³¨æ„ï¼š
 
-£¨1£©Ó¤¶ùµÚ¼¸ÖÜ³öÉúÊý¾ÝÓÉÓÚ±»µ÷²éÈËÑ¡Ìî´íÎóµÈÔ­Òò³öÏÖÁËÒ»Ð©²»ºÏÀíÊý¾Ý£¬±ÈÈç´íÌîÁËÔÂ·Ý£¨5<prglength<=10£©£¬ÆäËû´íÌî£¨prglength<=5, 
-10<prglength<=25, prglength>=49£©£¬¶ÔÓÚ´íÌîÔÂ·ÝµÄÇé¿ö£¬½«ÔÂ·Ý*4.33×÷ÎªÆäÖÜÊý£¬¶ÔÓÚÆäËû´íÌîÇé¿öÔòÉáÆú´ËÌõÊý¾Ý
+ï¼ˆ1ï¼‰å©´å„¿ç¬¬å‡ å‘¨å‡ºç”Ÿæ•°æ®ç”±äºŽè¢«è°ƒæŸ¥äººé€‰å¡«é”™è¯¯ç­‰åŽŸå› å‡ºçŽ°äº†ä¸€äº›ä¸åˆç†æ•°æ®ï¼Œæ¯”å¦‚é”™å¡«äº†æœˆä»½ï¼ˆ5<prglength<=10ï¼‰ï¼Œå…¶ä»–é”™å¡«ï¼ˆprglength<=5, 
+10<prglength<=25, prglength>=49ï¼‰ï¼Œå¯¹äºŽé”™å¡«æœˆä»½çš„æƒ…å†µï¼Œå°†æœˆä»½*4.33ä½œä¸ºå…¶å‘¨æ•°ï¼Œå¯¹äºŽå…¶ä»–é”™å¡«æƒ…å†µåˆ™èˆå¼ƒæ­¤æ¡æ•°æ®
 
-£¨2£©Ò»°ãÈÏÎª£¬Èç¹ûÓ¤¶ùÔÚµÚ37ÖÜ»ò¸üÔç³öÉú£¬ÄÇ¾ÍÊÇÌáÇ°³öÉú£»×¼Ê±³öÉúÔòÊÇÔÚµÚ38ÖÜµ½µÚ40ÖÜ£»¶øÑÓºó³öÉúÔòÊÇÔÚ41ÖÜ»ò¸üÍí
+ï¼ˆ2ï¼‰ä¸€èˆ¬è®¤ä¸ºï¼Œå¦‚æžœå©´å„¿åœ¨ç¬¬37å‘¨æˆ–æ›´æ—©å‡ºç”Ÿï¼Œé‚£å°±æ˜¯æå‰å‡ºç”Ÿï¼›å‡†æ—¶å‡ºç”Ÿåˆ™æ˜¯åœ¨ç¬¬38å‘¨åˆ°ç¬¬40å‘¨ï¼›è€Œå»¶åŽå‡ºç”Ÿåˆ™æ˜¯åœ¨41å‘¨æˆ–æ›´æ™š
 """
 
+import urllib
+from scipy import stats
+import json
+import numpy
+
 class Solution:
-    def solve(self):
-        pass
+	def solve(self):
+		url = "http://112.124.1.3:8060/getData/101.json"
+		page = urllib.urlopen(url)
+		html = page.read()
+		
+		data = json.loads(html)['data']
+		A = [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+		for r in data:
+			prglength = r[2]
+			if not (prglength <= 5 or 10 < prglength <= 25 or prglength >= 49):
+				if 5 < prglength <= 10:
+					prglength *= 4.33
+				if r[5] == 1:
+					i = 1
+				else:
+					i = 0
+				if prglength <= 37:
+					j = 0
+				elif prglength >= 41:
+					j = 1
+				else:
+					j = 2
+				A[i][j] += 1
+
+		row = numpy.sum(A, 1)
+		column = numpy.sum(A, 0)
+		total = float(numpy.sum(A))
+		
+		r = len(A)
+		c = len(A[0])
+		
+		x2 = 0.0
+		for j in range(c): # åªè®¡ç®—ç¬¬ä¸€è¡Œ
+			T1j = column[j] * row[1] / total
+			x2 += (A[1][j] - T1j) ** 2 / T1j
+		
+		p = stats.chi2.sf(abs(x2), (r - 1) * (c - 1))
+		return x2, p
+		
+s = Solution()
+print s.solve()
